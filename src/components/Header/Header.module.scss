@@ -1,0 +1,37 @@
+header{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__left{
+    display: flex;
+    align-items: center;
+
+    h1{
+        margin-left: 20px;
+        color: #fff;
+    }
+
+
+}
+
+.header__right{
+    display: flex;
+    align-items: center;
+
+    .button__click{
+        border: none;
+        background: transparent;
+        color: #fff;
+        padding: 5px;
+        margin: 10px;
+        font-size: 14px;
+
+
+    }
+
+    .button__click:hover{
+        color: red;
+    }
+}
