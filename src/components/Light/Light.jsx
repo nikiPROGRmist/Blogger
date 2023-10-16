@@ -7,7 +7,7 @@ export const Light = () => {
   return (
     <div class="toggle-switch">
       <label>
-        <input type="checkbox" onClick={setNight} />
+        <input className="input__light" type="checkbox" onClick={setNight} />
         <span class="slider"></span>
       </label>
     </div>

@@ -1,0 +1,27 @@
+.card__icon{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
+
+
+}
+
+.card__item{
+    min-width: 450px;
+    margin-bottom:15px ;
+    min-height: 350px;
+    border: 1px solid red;
+
+    @media(max-width:970px){
+        width: 700px;
+        margin: 0 auto;
+    }
+
+
+
+}
+
+

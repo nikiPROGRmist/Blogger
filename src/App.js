@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
 import { Header } from "./components/Header/Header";
+import { Search } from "./components/Search/Search";
+import { Card } from "./components/Card/Card";
 export const LightContext = React.createContext("");
 function App() {
   const [light, setLight] = useState(false);
@@ -9,13 +11,17 @@ function App() {
     setLight(!light);
   };
   return (
-    <LightContext.Provider value={{ setNight }}>
-      <div className="wrapper" style={light ? { background: "#fff" } : { background: "#0e141b" }}>
-        <div className="container">
-          <Header setNight={setNight} />
+    <>
+      <LightContext.Provider value={{ setNight }}>
+        <div className="wrapper" style={light ? { background: "#fff" } : { background: "#0e141b" }}>
+          <div className="container">
+            <Header setNight={setNight} />
+            <Search />
+            <Card />
+          </div>
         </div>
-      </div>
-    </LightContext.Provider>
+      </LightContext.Provider>
+    </>
   );
 }
 

@@ -28,7 +28,7 @@
     cursor: pointer;
   }
 
-  input {
+  .input__light {
     position: absolute;
     display: none;
   }

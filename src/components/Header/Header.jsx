@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./Header.module.scss";
 import { Light } from "../Light/Light";
 
 export const Header = () => {
+  const [registration, setRegistration] = useState(true);
+
   return (
     <header>
       <div className={style.header__left}>
@@ -44,9 +46,15 @@ export const Header = () => {
         <h1>CHRISTMAS.NA</h1>
       </div>
       <div className={style.header__right}>
-        <div className={style.button__click}>Главная</div>
-        <div className={style.button__click}>Заметки</div>
-
+        {registration ? (
+          <>
+            <div className={style.button__click}>Войти</div>
+            <div className={style.button__click}>Зарегистрироваться</div>
+          </>
+        ) : (
+          <div className={style.button__click}>Написать статью</div>
+        )}
+        <div className={style.button__click}>Мой профиль</div>
         <Light />
       </div>
     </header>
