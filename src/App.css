@@ -4,6 +4,8 @@ body{
   background-color: #0e141b;
   font-family: 'Montserrat', sans-serif;
 
+
+
 }
 *{
   box-sizing: border-box;
@@ -11,20 +13,44 @@ body{
 
 
 
-
 .container{
-  max-width: 1000px;
+  max-width: 1250px;
   height: 100vh;
   margin: 0 auto;
   padding: 0 25px;
 }
 
-.intro{
-  color: #fff;
-  font-weight: 800;
-  font-size: 24px;
-  text-align: left;
-  margin: 50px 0;
+
+.arrow-3 {
+  color: #337AB7;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 18px;
+  display: inline-block;
+  margin: 20px;
 }
+.arrow-3 .arrow-3-icon {
+  position: relative;
+  top: -1px;
+  transition: transform 0.3s ease;
+  vertical-align: middle;
+  color: #0e141b;
+}
+.arrow-3 .arrow-3-iconcircle {
+  color: #0e141b;
+  transition: stroke-dashoffset .3s ease;
+  stroke-dasharray: 95;
+  stroke-dashoffset: 95;
+}
+.arrow-3:hover .arrow-3-icon {
+  transform: translate3d(5px, 0, 0);
+
+}
+.arrow-3:hover .arrow-3-iconcircle {
+  stroke-dashoffset: 0;
+
+}
+
 
 

@@ -43,7 +43,7 @@ export const Header = () => {
             />
           </svg>
         </div>
-        <h1>CHRISTMAS.NA</h1>
+        <h1>DRIVER.RU</h1>
       </div>
       <div className={style.header__right}>
         {registration ? (

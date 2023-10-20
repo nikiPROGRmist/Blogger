@@ -5,7 +5,6 @@ import style from "./card.module.scss";
 import cards from "../../Cardes.json";
 
 export const Card = () => {
-  // const SetText = cards.text.length > 30 ? <>{cards.text.slice(0, 150)} ...</> : cards.text;
   const setTextLength = (item) => {
     return item.length > 50 ? <>{item.slice(0, 170)} ...</> : item;
   };
