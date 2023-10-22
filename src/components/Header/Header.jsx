@@ -1,24 +1,26 @@
 import React, { useState } from "react";
 import style from "./Header.module.scss";
 import { Light } from "../Light/Light";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const [registration, setRegistration] = useState(true);
 
   return (
     <header>
-      <div className={style.header__left}>
-        <div className={style.logo}>
-          <svg
-            height="30px"
-            width="30px"
-            version="1.1"
-            id="Layer_1"
-            viewBox="0 0 441.6 441.6"
-            fill="#fff"
-          >
-            <path
-              d="M220.8,0.4C99.2,0.4,0,99.6,0,221.2s99.2,220,220.8,220S441.6,342,441.6,220.4S342.4,0.4,220.8,0.4z
+      <Link to="/">
+        <div className={style.header__left}>
+          <div className={style.logo}>
+            <svg
+              height="30px"
+              width="30px"
+              version="1.1"
+              id="Layer_1"
+              viewBox="0 0 441.6 441.6"
+              fill="#fff"
+            >
+              <path
+                d="M220.8,0.4C99.2,0.4,0,99.6,0,221.2s99.2,220,220.8,220S441.6,342,441.6,220.4S342.4,0.4,220.8,0.4z
 	 M424.8,206l-40,1.6c-1.6-15.2-4.8-30.4-10.4-44l36.8-16C418.4,165.2,423.2,185.2,424.8,206z M404.8,132.4l-36.8,16
 	c-6.4-13.6-15.2-26.4-25.6-37.6L371.2,82C384.8,97.2,396,114,404.8,132.4z M284,306c15.2-11.2,26.4-25.6,34.4-43.2l40,13.6
 	c-10.4,26.4-28.8,48.8-51.2,64.8L284,306z M293.6,350c-19.2,11.2-40.8,17.6-64.8,18.4V326c15.2-0.8,28.8-5.6,41.6-12L293.6,350z
@@ -40,21 +42,29 @@ export const Header = () => {
 	c17.6-0.8,34.4-4.8,49.6-10.4l16,36.8C274.4,419.6,252,424.4,228.8,425.2z M309.6,405.2l-16-36.8c14.4-7.2,28-16.8,40-28l28.8,28
 	C347.2,383.6,328.8,395.6,309.6,405.2z M373.6,357.2l-28.8-28C356,316.4,365.6,302,372,286l37.6,14.4
 	C400.8,321.2,388,340.4,373.6,357.2z M377.6,270.8c4.8-15.2,7.2-31.2,8-48l40-1.6c0,22.4-4,43.2-10.4,63.2L377.6,270.8z"
-            />
-          </svg>
+              />
+            </svg>
+          </div>
+          <h1>DRIVER.RU</h1>
         </div>
-        <h1>DRIVER.RU</h1>
-      </div>
+      </Link>
+
       <div className={style.header__right}>
         {registration ? (
           <>
-            <div className={style.button__click}>Войти</div>
-            <div className={style.button__click}>Зарегистрироваться</div>
+            <Link to="/login">
+              <div className={style.button__click}>Войти</div>
+            </Link>
+            <Link to="/registration">
+              <div className={style.button__click}>Зарегистрироваться</div>
+            </Link>
           </>
         ) : (
           <div className={style.button__click}>Написать статью</div>
         )}
-        <div className={style.button__click}>Мой профиль</div>
+        <Link to="/profile">
+          <div className={style.button__click}>Мой профиль</div>
+        </Link>
         <Light />
       </div>
     </header>

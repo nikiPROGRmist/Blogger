@@ -1,0 +1,79 @@
+.profile{
+display: flex;
+justify-content: space-between;
+margin-top: 50px;
+text-align: center;
+
+}
+
+.profile__avatar{
+    width: 500px;
+    height: 500px;
+    background-color: #192028;
+    border-radius: 30px;
+    padding-top: 50px;
+
+
+
+
+}
+
+.profile__information{
+    width: 650px;
+    height: 500px;
+    background-color: #192028;
+    border-radius: 30px;
+
+}
+
+.avatar{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: gray;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+
+
+}
+
+.title{
+    text-align: center;
+    font-size: 23px;
+    font-weight: 400;
+    margin: 15px auto;
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
+}
+
+.profile__btn{
+   width: 220px;
+   height: 50px;
+   border-radius: 30px;
+   color: #fff;
+   font-family: 'Roboto Condensed', sans-serif;
+   font-weight: 600;
+   margin: 20px auto 0;
+   font-size: 16px;
+   background-color: #2558fc;
+   border: none;
+
+
+}
+
+//  PROF - INFO
+
+.profile__information{
+    padding: 20px ;
+}
+
+.ptof__info{
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid gray;
+
+}

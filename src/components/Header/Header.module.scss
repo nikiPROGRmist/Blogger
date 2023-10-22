@@ -27,10 +27,17 @@ header{
     .button__click{
 
         background: transparent;
+        font-weight: 700;
         color: #fff;
         padding: 5px;
         margin: 10px;
-        font-size: 14px;
+        font-size: 16px;
+        transition: color 0.3s ease;
+
+
+        &:hover{
+        color: yellow;
+        }
 
 
     }

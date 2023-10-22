@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./App.css";
+import { AuthLoginForm } from "./components/AuthLoginForm/AuthLoginForm";
+import { Route, Routes } from "react-router-dom";
+import { Home } from "./components/Home/Home";
 import { Header } from "./components/Header/Header";
-import { Search } from "./components/Search/Search";
-import { Card } from "./components/Card/Card";
-import { Footer } from "./components/Footer/Footer";
-import { Intro } from "./components/Intro/Intro";
+import { Registration } from "./components/RegistrationForm/Registration";
+import { Profile } from "./components/MyProfile/Profile";
 export const LightContext = React.createContext("");
 function App() {
   const [light, setLight] = useState(false);
@@ -17,11 +18,13 @@ function App() {
       <LightContext.Provider value={{ setNight }}>
         <div className="wrapper" style={light ? { background: "#fff" } : { background: "#0e141b" }}>
           <div className="container">
-            <Header setNight={setNight} />
-            <Intro />
-            <Search />
-            <Card />
-            <Footer />
+            <Header />
+            <Routes>
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/registration" element={<Registration />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<AuthLoginForm />} />
+            </Routes>
           </div>
         </div>
       </LightContext.Provider>

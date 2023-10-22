@@ -1,4 +1,6 @@
-
+a{
+  text-decoration: none;
+}
 
 body{
   background-color: #0e141b;
@@ -7,6 +9,8 @@ body{
 
 
 }
+
+
 *{
   box-sizing: border-box;
 }
