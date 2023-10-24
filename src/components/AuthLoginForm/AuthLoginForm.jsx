@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./authLoginForm.module.scss";
+import { Link } from "react-router-dom";
 
 export const AuthLoginForm = () => {
   return (
@@ -17,9 +18,11 @@ export const AuthLoginForm = () => {
             <button className={style.auto__btn} type="button">
               Войти
             </button>
-            <h6>
-              <a href="">нет аккаунта? Авторизация</a>
-            </h6>
+            <Link to="/registration">
+              <h6>
+                <a href="">Нет аккаунта? Зарегистрироваться!</a>
+              </h6>
+            </Link>
           </div>
         </div>
       </div>

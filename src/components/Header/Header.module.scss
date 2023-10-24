@@ -2,6 +2,7 @@ header{
     padding-top: 10px;
     display: flex;
     justify-content: space-between;
+    position: relative;
 
     @media (max-width:650px) {
         flex-wrap: wrap;
@@ -23,21 +24,28 @@ header{
 .header__right{
     display: flex;
     align-items: center;
+    position: relative;
+
+
 
     .button__click{
-
+        width: 150px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 10px;
         background: transparent;
-        font-weight: 700;
+        font-weight: 600;
         color: #fff;
-        padding: 5px;
-        margin: 10px;
-        font-size: 16px;
+        padding: 10px;
+        margin: 20px;
+        font-size: 14px;
         transition: color 0.3s ease;
+        background-color: #2558fc;
 
 
-        &:hover{
-        color: yellow;
-        }
+
+
+
 
 
     }
@@ -47,4 +55,84 @@ header{
     }
 
 
+
+
+
+    .btn__click{
+        display: inline-block;
+        position: relative;
+        fill: #fff;
+
+
+
+
+
+        &:hover .hover__icon{
+            display: block;
+
+            @media (max-width:1200px) {
+                display: none;
+            }
+        }
+
+        .svg__btn{
+            display: block;
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+           svg{
+          fill: #fff;
+          transition: fill 0.2s ease;
+
+          &:hover{
+            fill: #2558fc;
+          }
+           }
+        }
+
+        .hover__icon{
+            text-align: center;
+            width: 200px;
+            height: 100px;
+            box-shadow: 2px 0px 9px 4px rgba(34, 60, 80, 0.2);
+            position: absolute;
+            z-index: 2;
+            top: 40px;
+            right: 0;
+            z-index: 99;
+            background-color: #0e141b;
+            display: none;
+
+            .title{
+                font-size: 16px;
+                color: #fff;
+                font-weight: 400;
+                margin: 13px 0 0 0;
+            }
+
+
+
+
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+
